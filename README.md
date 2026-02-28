@@ -126,7 +126,6 @@ This project is for business use by Rajinder Da Dhaba.
 
 Developed by Shubham Kumar
 
-```
 
 ---
 
