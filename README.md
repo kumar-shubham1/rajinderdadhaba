@@ -1,4 +1,3 @@
----
 ````
 # Rajinder Da Dhaba — Official Website
 
@@ -131,16 +130,4 @@ Developed by Shubham Kumar
 
 ---
 
-## 🔥 If you want, I can also give you:
-
-- ⭐ A **high-impact README that impresses recruiters**
-- ⭐ Deployment guide (Vercel / Netlify)
-- ⭐ SEO optimization for restaurant sites
-- ⭐ Landing page conversion improvements
-- ⭐ GitHub profile-level project README
-- ⭐ Add badges + preview screenshots
-
-Just say 👇  
-**“Make this a top-tier portfolio project”**
-::contentReference[oaicite:0]{index=0}
 ```
