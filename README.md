@@ -1,5 +1,5 @@
-````
-# Rajinder Da Dhaba — Official Website
+
+### Rajinder Da Dhaba — Official Website
 
 Modern, professional website for Rajinder Da Dhaba designed to generate inbound calls, orders, and customer visits.
 
@@ -130,4 +130,3 @@ Developed by Shubham Kumar
 
 ---
 
-```
