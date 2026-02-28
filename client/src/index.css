@@ -1,0 +1,250 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Elegant warm color palette */
+  --primary: oklch(0.6 0.15 40);        /* Warm rust/brown */
+  --primary-foreground: oklch(1 0 0);   /* Cream white */
+  --sidebar-primary: oklch(0.55 0.14 40);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --chart-1: oklch(0.65 0.16 40);
+  --chart-2: oklch(0.6 0.15 40);
+  --chart-3: oklch(0.55 0.14 40);
+  --chart-4: oklch(0.5 0.13 40);
+  --chart-5: oklch(0.45 0.12 40);
+  --radius: 0.5rem;
+  --background: oklch(0.98 0.001 60);   /* Off-white */
+  --foreground: oklch(0.2 0.01 60);     /* Dark charcoal */
+  --card: oklch(1 0 0);                 /* Pure white */
+  --card-foreground: oklch(0.2 0.01 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.01 60);
+  --secondary: oklch(0.95 0.005 60);
+  --secondary-foreground: oklch(0.3 0.01 60);
+  --muted: oklch(0.9 0.003 60);
+  --muted-foreground: oklch(0.5 0.01 60);
+  --accent: oklch(0.6 0.15 40);         /* Warm rust accent */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.002 60);
+  --input: oklch(1 0 0);
+  --ring: oklch(0.6 0.15 40);
+  --sidebar: oklch(0.98 0.001 60);
+  --sidebar-foreground: oklch(0.2 0.01 60);
+  --sidebar-accent: oklch(0.6 0.15 40);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.92 0.002 60);
+  --sidebar-ring: oklch(0.6 0.15 40);
+}
+
+.dark {
+  --primary: oklch(0.7 0.16 40);        /* Lighter rust for dark mode */
+  --primary-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.65 0.15 40);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --background: oklch(0.15 0.01 60);    /* Dark charcoal */
+  --foreground: oklch(0.95 0.002 60);   /* Off-white */
+  --card: oklch(0.22 0.008 60);         /* Slightly lighter charcoal */
+  --card-foreground: oklch(0.95 0.002 60);
+  --popover: oklch(0.22 0.008 60);
+  --popover-foreground: oklch(0.95 0.002 60);
+  --secondary: oklch(0.25 0.008 60);
+  --secondary-foreground: oklch(0.8 0.002 60);
+  --muted: oklch(0.3 0.008 60);
+  --muted-foreground: oklch(0.7 0.01 60);
+  --accent: oklch(0.7 0.16 40);
+  --accent-foreground: oklch(0.15 0.01 60);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.3 0.008 60);
+  --input: oklch(0.22 0.008 60);
+  --ring: oklch(0.7 0.16 40);
+  --chart-1: oklch(0.65 0.16 40);
+  --chart-2: oklch(0.6 0.15 40);
+  --chart-3: oklch(0.55 0.14 40);
+  --chart-4: oklch(0.5 0.13 40);
+  --chart-5: oklch(0.45 0.12 40);
+  --sidebar: oklch(0.22 0.008 60);
+  --sidebar-foreground: oklch(0.95 0.002 60);
+  --sidebar-accent: oklch(0.7 0.16 40);
+  --sidebar-accent-foreground: oklch(0.15 0.01 60);
+  --sidebar-border: oklch(0.3 0.008 60);
+  --sidebar-ring: oklch(0.7 0.16 40);
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    @apply text-5xl md:text-6xl font-bold;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+  h4 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
+
+/* Additional elegant utilities */
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .elegant-shadow {
+    @apply shadow-md hover:shadow-lg transition-shadow;
+  }
+
+  .elegant-border {
+    @apply border border-border;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 bg-accent text-accent-foreground rounded-md font-semibold hover:opacity-90 transition-opacity;
+  }
+
+  .button-secondary {
+    @apply px-6 py-3 bg-card text-card-foreground border border-border rounded-md font-semibold hover:bg-muted transition-colors;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-amber-700 bg-clip-text text-transparent;
+  }
+
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent) / 0.8);
+}
